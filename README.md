@@ -1,18 +1,42 @@
 # GitHub Repositories Explorer
 
-This app allows you to search GitHub users and display their repositories.
+A simple React + Vite application to explore GitHub users and their repositories.
 
-## Setup
+## 🔗 Live Demo
+
+👉 [https://github-repositories-explorer-31u3.vercel.app](https://github-repositories-explorer-31u3.vercel.app)
+
+## 📦 Features
+
+- 🔍 Search GitHub users (max 5 results)
+- 👤 Expandable user list
+- 📁 View repositories under selected user
+- ⭐ Show repository star count
+- ⚠️ Error & loading handling
+- 📱 Responsive design (mobile-friendly)
+
+## ⚙️ Getting Started
+
+Install dependencies:
 
 ```bash
 npm install
+```
+
+Start the local development server:
+
+```bash
 npm run dev
 ```
 
-Then open your browser to http://localhost:5173/
+Run unit tests:
 
-## Features
-- Search GitHub usernames (max 5)
-- View repositories for selected user
-- Loading & error handling
-- Responsive UI
+```bash
+npm run test
+```
+
+Buka di browser: `http://localhost:5173`
+
+---
+
+> Built with ❤️ by Mahfudz Fahry
