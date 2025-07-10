@@ -35,7 +35,7 @@ Run unit tests:
 npm run test
 ```
 
-Buka di browser: `http://localhost:5173`
+Open in browser: `http://localhost:5173`
 
 ---
 
