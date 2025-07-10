@@ -14,6 +14,19 @@ A simple React + Vite application to explore GitHub users and their repositories
 - ⭐ Show repository star count
 - ⚠️ Error & loading handling
 - 📱 Responsive design (mobile-friendly)
+- ⌨️ Supports `Enter` key to trigger search (keyboard accessible)
+
+## 🧪 Sample Usernames for Testing
+
+You can try searching the following GitHub usernames:
+
+- `gaearon`
+- `torvalds`
+- `yyx990803`
+- `sindresorhus`
+- `facebook`
+
+These are real public accounts with visible repositories.
 
 ## ⚙️ Getting Started
 
