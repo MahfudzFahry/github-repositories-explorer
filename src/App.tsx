@@ -3,6 +3,7 @@ import axios from 'axios';
 
 function App() {
   const [query, setQuery] = useState('');
+  const [submittedQuery, setSubmittedQuery] = useState('');
   const [users, setUsers] = useState<any[]>([]);
   const [activeUser, setActiveUser] = useState<string | null>(null);
   const [repos, setRepos] = useState<{ [key: string]: any[] }>({});
@@ -19,6 +20,7 @@ function App() {
     try {
       const res = await axios.get(`https://api.github.com/search/users?q=${query}`);
       setUsers(res.data.items.slice(0, 5));
+      setSubmittedQuery(query);
     } catch {
       setError('Failed to fetch users.');
     } finally {
@@ -75,8 +77,20 @@ function App() {
         Search
       </button>
 
+      {submittedQuery && users.length > 0 && (
+        <p style={{ marginTop: '1rem', fontSize: '0.875rem', color: '#555' }}>
+          Showing users for “<strong>{submittedQuery}</strong>”
+        </p>
+      )}
+
       {loadingUsers && <p>Loading users...</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
+
+      {submittedQuery && !loadingUsers && users.length === 0 && (
+        <p style={{ marginTop: '1rem', fontSize: '0.875rem', color: '#888' }}>
+          No users found for “<strong>{submittedQuery}</strong>”
+        </p>
+      )}
 
       <div style={{ marginTop: '1rem' }}>
         {users.map((user) => (
